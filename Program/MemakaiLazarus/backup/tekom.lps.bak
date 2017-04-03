@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="tekom.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="scanner"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="45"/>
+        <CursorPos X="66" Y="45"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="tekom.pas"/>
+        <Caret Line="146" TopLine="117"/>
+      </Position1>
+      <Position2>
+        <Filename Value="tekom.pas"/>
+        <Caret Line="145" Column="16" TopLine="117"/>
+      </Position2>
+      <Position3>
+        <Filename Value="tekom.pas"/>
+        <Caret Line="143" TopLine="115"/>
+      </Position3>
+      <Position4>
+        <Filename Value="tekom.pas"/>
+        <Caret Line="145" Column="4" TopLine="115"/>
+      </Position4>
+      <Position5>
+        <Filename Value="tekom.pas"/>
+        <Caret Line="147" TopLine="115"/>
+      </Position5>
+      <Position6>
+        <Filename Value="tekom.pas"/>
+        <Caret Line="145" Column="29" TopLine="122"/>
+      </Position6>
+      <Position7>
+        <Filename Value="tekom.pas"/>
+        <Caret Line="107" Column="66" TopLine="101"/>
+      </Position7>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

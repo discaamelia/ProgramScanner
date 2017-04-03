@@ -1,0 +1,156 @@
+program scanner;
+
+uses crt;
+var
+   ch       :char;
+   f,f_hasil:text;
+   kata,Nm_token : string;
+
+   procedure bacafile;
+      begin
+        read(f,ch);
+
+      end;
+
+   procedure hasil;
+     begin
+        append(f_hasil);
+        writeln(f_hasil, kata : 15,' : ', Nm_token);
+        writeln(kata : 15,' : ', Nm_token);
+     end;
+
+   function cekkeyword(s:string):string;
+        var
+        x       : byte;
+        panjang : integer;
+        f       : text;
+        data    : string;
+
+        begin
+             panjang:= length(s);
+             for x:=1 to panjang do
+             begin
+             if s[x]= upcase (s[x]) then
+                s[x] := s[x]
+              else
+                  s[x]:= chr(ord(s[x])+32);
+                  readln;
+              end;
+
+              assign(f,'Program.txt');
+              reset(f);
+              while not eof(f) do
+              begin
+                   readln(f,data);
+                   if s=data then Nm_token:='Identifier / Keyword';
+                   end;
+                   readln;
+                   close(f);
+              end;
+
+       procedure periksa;
+         begin
+            while not eof(f) do
+            begin
+             bacafile;
+              if (ch = '<') then
+              begin
+              if (ch = '=') then
+   				write('operator <=')
+                  else if (ch = '>') then
+                    write('operator <>');
+                    readln;
+               end;
+
+               if (ch = ':') then
+              begin
+              if (ch = '=') then
+   				write('operator:=')
+                  else if (ch = '=') then
+                    write('operator ==');
+                    readln;
+               end;
+
+               if ch = char (39) then
+                  begin
+                     repeat
+                       begin
+                       kata := kata + ch;
+                       bacafile;
+                  end;
+                      until ch = char(39) ;
+                      kata := kata + ch;
+                      Nm_token := 'Konstanta';
+                      hasil;
+                      kata :='';
+                      readln;
+                  end;
+
+                  if (ch in['A'..'Z','a'..'z','_']) then
+                     begin
+                          repeat
+                     begin
+                          kata := kata + ch;
+                          bacafile;
+                     end;
+                         until (not(ch in['A'..'Z','a'..'z','_']));
+                         Nm_token:='Identifier ';
+                         cekkeyword(kata);
+                         hasil;
+                         kata :='';
+                         readln;
+                         end;
+
+                         if (ch in['0'..'9']) then
+                            begin
+                                 repeat
+                            begin
+                                 kata := kata + ch;
+                                 bacafile;
+                                 end;
+                                 until (not(ch in['0'..'9']));
+                                 Nm_token := 'Konstanta / Integer';
+                                 hasil;
+                                 kata :='';
+                                 readln;
+                            end;
+
+                            if (ch in['+','-','*','/','^']) then
+                               begin
+                                    repeat
+                               begin
+                               kata := kata+ch;
+                               bacafile;
+                               end;
+                                   until (not(ch in['+','-','*','/',' ','^']));
+                                   Nm_token :='Operator';
+                                   hasil;
+                                   kata:='';
+                                   readln;
+                               end;
+
+                               if (ch in['(',')','[',']','^',':',';',',','?']) then
+                                  begin
+                                       kata:=ch;
+                                       Nm_token :='Delimiter';
+                                       hasil;
+                                       kata:='';
+                                  end;
+                               end;
+                           end;
+
+
+         begin //program utama
+         clrscr;
+         assign(f,'E:\KULIAH\SEMESTER-6\TEKOM\tekom.lps');
+         reset(f);
+         assign(f_hasil,'Program.txt');
+         rewrite(f_hasil);
+         periksa;
+         hasil;
+         read(f);
+         read(f_hasil);
+
+         end.
+
+
