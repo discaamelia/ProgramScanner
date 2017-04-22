@@ -1,0 +1,3 @@
+# ProgramScanner
+MenggunakanLazarusdanPascal
+Matakuliah Teknik Kompilasi
