@@ -1,3 +1,3 @@
-ProgramScanner --> Tahap Kompilasi yang bertujuan untuk memeriksa kemunculan Token-token.
+ProgramScanner
 MenggunakanLazarusdanPascal
-Matakuliah Teknik Kompilasi : 
+Tugas Teknik Kompilasi 1 : Parser, Tahap Kompilasi yang bertujuan untuk memeriksa kemunculan Token-token.
